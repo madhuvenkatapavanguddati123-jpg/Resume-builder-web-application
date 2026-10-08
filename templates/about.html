@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}ResumeBuilder Pro | About{% endblock %}
+{% block content %}
+<section class="page-hero compact-hero">
+    <div class="container narrow">
+        <span class="eyebrow">About the app</span>
+        <h1>Built for realistic resume creation</h1>
+        <p>ResumeBuilder Pro is designed as a modern Flask application with a practical editing workflow, clear structure, and a frontend architecture ready for future backend persistence.</p>
+    </div>
+</section>
+<section class="section-block">
+    <div class="container info-grid">
+        <article class="info-card">
+            <h2>Why this rebuild</h2>
+            <p>The application is refactored around one clean Flask app, consistent routes, shared templates, and modular JavaScript so every page works together instead of feeling stitched together.</p>
+        </article>
+        <article class="info-card">
+            <h2>Who it helps</h2>
+            <p>Students, freshers, and early-career professionals can create ATS-friendly resumes without being forced into unnecessary fields or heavy workflows.</p>
+        </article>
+        <article class="info-card">
+            <h2>How it is structured</h2>
+            <p>The current version uses LocalStorage for drafts and autosave, while keeping a consistent resume data model that can later be connected to an API or database.</p>
+        </article>
+    </div>
+</section>
+{% endblock %}

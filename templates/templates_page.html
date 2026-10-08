@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}ResumeBuilder Pro | Templates{% endblock %}
+{% block content %}
+<section class="page-hero compact-hero">
+    <div class="container narrow">
+        <span class="eyebrow">Template gallery</span>
+        <h1>Choose a resume template</h1>
+        <p>All templates use the same resume data, so you can change the design any time without losing your work.</p>
+    </div>
+</section>
+<section class="section-block">
+    <div class="container template-grid">
+        <article class="template-card">
+            <div class="template-preview preview-classic">
+                <div class="mini-resume classic"></div>
+            </div>
+            <h2>Classic Blue</h2>
+            <p>Centered header, balanced spacing, and blue section headings for a clean ATS-friendly look.</p>
+            <a href="{{ url_for('editor', template='template1') }}" class="btn btn-primary">Use Template</a>
+        </article>
+        <article class="template-card">
+            <div class="template-preview preview-slate">
+                <div class="mini-resume slate"></div>
+            </div>
+            <h2>Modern Slate</h2>
+            <p>Left-aligned header with a strong top accent border and more contemporary spacing.</p>
+            <a href="{{ url_for('editor', template='template2') }}" class="btn btn-primary">Use Template</a>
+        </article>
+        <article class="template-card">
+            <div class="template-preview preview-mono">
+                <div class="mini-resume mono"></div>
+            </div>
+            <h2>Minimal Mono</h2>
+            <p>Compact black and gray styling with strong typography for focused, minimal resumes.</p>
+            <a href="{{ url_for('editor', template='template3') }}" class="btn btn-primary">Use Template</a>
+        </article>
+    </div>
+</section>
+{% endblock %}

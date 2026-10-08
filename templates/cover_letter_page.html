@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}ResumeBuilder Pro | Cover Letter{% endblock %}
+{% block content %}
+<section class="page-hero compact-hero">
+    <div class="container narrow">
+        <span class="eyebrow">Cover letter builder</span>
+        <h1>Create a tailored cover letter</h1>
+        <p>Write a professional cover letter with a guided form, live preview, and browser-based print or PDF export.</p>
+    </div>
+</section>
+<section class="section-block">
+    <div class="container centered-actions">
+        <a href="{{ url_for('cover_letter') }}" class="btn btn-primary">Open Cover Letter Builder</a>
+    </div>
+</section>
+{% endblock %}

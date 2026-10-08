@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}ResumeBuilder Pro | Cover Letter Builder{% endblock %}
+{% block body_class %}cover-letter-shell{% endblock %}
+{% block content %}
+<section class="editor-page cover-letter-page">
+    <div class="container wide">
+        <div class="builder-layout single-builder">
+            <section class="editor-panel card-panel" aria-label="Cover letter editor">
+                <div class="panel-header">
+                    <div>
+                        <span class="eyebrow">Editor</span>
+                        <h1>Cover letter builder</h1>
+                    </div>
+                    <div class="toolbar-actions">
+                        <button type="button" class="btn btn-secondary" id="cover-letter-print-btn">Print / Save PDF</button>
+                    </div>
+                </div>
+                <form id="cover-letter-form" class="editor-form" novalidate>
+                    <div class="field-grid two-col">
+                        <div class="form-field"><label for="cl-name">Name <span class="required">*</span></label><input id="cl-name" name="name" type="text"><small class="field-error" data-error-for="name"></small></div>
+                        <div class="form-field"><label for="cl-email">Email <span class="required">*</span></label><input id="cl-email" name="email" type="email"><small class="field-error" data-error-for="email"></small></div>
+                        <div class="form-field"><label for="cl-phone">Phone</label><input id="cl-phone" name="phone" type="text"></div>
+                        <div class="form-field"><label for="cl-address">Address</label><input id="cl-address" name="address" type="text"></div>
+                        <div class="form-field"><label for="cl-company">Company</label><input id="cl-company" name="company" type="text"></div>
+                        <div class="form-field"><label for="cl-role">Job Role</label><input id="cl-role" name="role" type="text"></div>
+                    </div>
+                    <div class="form-field"><label for="cl-content">Cover Letter Content</label><textarea id="cl-content" name="content" rows="12" placeholder="Write a concise, role-focused cover letter with a strong opening, relevant achievements, and a confident closing."></textarea></div>
+                </form>
+            </section>
+            <aside class="preview-panel card-panel" aria-label="Cover letter preview">
+                <div class="preview-toolbar">
+                    <div class="preview-toolbar-left">
+                        <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+                        <span class="pill">Cover Letter</span>
+                    </div>
+                </div>
+                <div class="preview-scroll-area">
+                    <div id="cover-letter-preview" class="resume-paper cover-letter-paper"></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/cover_letter.js') }}" defer></script>
+{% endblock %}
